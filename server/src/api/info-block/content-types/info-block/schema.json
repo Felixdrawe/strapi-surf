@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "info_blocks",
+  "info": {
+    "singularName": "info-block",
+    "pluralName": "info-blocks",
+    "displayName": "InfoBlock"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "headline": {
+      "type": "string",
+      "required": true
+    },
+    "text": {
+      "type": "blocks",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "showImageRight": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "button": {
+      "type": "component",
+      "component": "info-block.button",
+      "repeatable": false,
+      "required": false
+    }
+  }
+}
