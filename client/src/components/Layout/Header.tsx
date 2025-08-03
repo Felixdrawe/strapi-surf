@@ -1,11 +1,12 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { it } from 'node:test';
 
 const Header = () => {
   const navItems = [
-    { display: 'the camp', slug: '' },
-    { display: 'the experience', slug: 'experience' },
-    { display: 'the blog', slug: 'blog' },
+    { display: 'the camp', slug: '/' },
+    { display: 'the experience', slug: '/experience' },
+    { display: 'the blog', slug: '/blog' },
   ];
   return (
     <header className="header">
@@ -13,7 +14,7 @@ const Header = () => {
       <ul className="header__nav">
         {navItems.map((item) => (
           <li key={item.slug}>
-            <Link href={`/${item.slug}`}>
+            <Link href={item.slug}>
               <h5>{item.display}</h5>
             </Link>
           </li>
