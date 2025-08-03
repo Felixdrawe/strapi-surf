@@ -57,7 +57,6 @@
     margin-top: 1rem;
     color: white;
     font-size: 1.8rem;
-
   }
   &__author {
     font-weight: 700;
@@ -68,8 +67,6 @@
     font-weight: 400;
   }
 
-  
-
   &__logo {
     position: absolute;
     bottom: 0;
@@ -77,8 +74,8 @@
     transform: translate(-50%, 50%);
 
     &--orange {
-      filter: invert(62%) sepia(21%) saturate(1646%) hue-rotate(348deg)
-        brightness(88%) contrast(81%);
+      filter: invert(62%) sepia(21%) saturate(1646%) hue-rotate(348deg) brightness(88%)
+        contrast(81%);
     }
   }
 }
