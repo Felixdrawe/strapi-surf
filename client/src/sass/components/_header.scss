@@ -1,3 +1,5 @@
+@use '../base/variables';
+
 .header {
   position: absolute;
   top: 0;
@@ -11,30 +13,15 @@
 
   &--light {
     color: white;
-    background-color: $orange;
-  }
 
-  &--white {
-    filter: invert(100%) sepia(0%) saturate(7499%) hue-rotate(25deg) brightness(102%) contrast(101%);
-  }
-
-  img {
-    height: auto;
-    width: 5rem;
+    & .header__logo {
+      filter: invert(99%) sepia(3%) saturate(825%) hue-rotate(200deg) brightness(118%)
+        contrast(100%);
+    }
   }
 
   &__logo {
-    height: auto;
     width: 5rem;
-
-    &--black {
-      filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(25deg) brightness(102%) contrast(101%);
-    }
-
-    &--white {
-      filter: invert(100%) sepia(0%) saturate(7499%) hue-rotate(25deg) brightness(102%)
-        contrast(101%);
-    }
   }
 
   &__nav {

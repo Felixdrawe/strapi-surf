@@ -1,14 +1,18 @@
+'use client';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
 const Header = () => {
+  const pathname = usePathname();
+  // Define the navigation items
   const navItems = [
     { display: 'the camp', slug: '/' },
     { display: 'the experience', slug: '/experience' },
     { display: 'the blog', slug: '/blog' },
   ];
   return (
-    <header className="header">
+    <header className={`header ${pathname === '/experience' ? 'header--light' : ''}`}>
       <Image className="header__logo" src="/assets/logo.svg" alt="Logo" width={50} height={50} />
       <ul className="header__nav">
         {navItems.map((item) => (

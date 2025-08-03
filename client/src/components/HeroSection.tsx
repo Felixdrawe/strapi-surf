@@ -35,16 +35,16 @@ export default function HeroSection({
       </div>
 
       {/* Overlay Content */}
-      <div className={`hero-headline hero-headline--${theme}`}>
+      <div className={`hero__headline hero-headline--${theme}`}>
         {headline || <h1>Welcome to our Surfcamp</h1>}
-        <button className={` btn btn--medium  btn--${theme}`}>
-          <Link href={buttonHref}>{buttonText}</Link>
-        </button>
       </div>
+      <button className={` btn btn--medium  btn--${theme}`}>
+        <Link href={buttonHref}>{buttonText}</Link>
+      </button>
 
       {/* Logo */}
       <div className={`hero__logo hero-logo--${theme}`}>
-        <Image src={logoSrc} alt="Logo" width={120} height={60} />
+        <Image src={logoSrc} alt="Logo" width={125} height={190} />
       </div>
     </section>
   );
