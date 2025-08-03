@@ -11,7 +11,7 @@ export default async function Home() {
   );
 
   const InfoBlockData = {
-    theme: 'turquoise',
+    theme: 'beige',
     reversed: false,
     image: {
       url: '/info-blocks/tent.png',

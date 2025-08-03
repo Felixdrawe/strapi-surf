@@ -35,7 +35,7 @@ export default function HeroSection({
       </div>
 
       {/* Overlay Content */}
-      <div className={`hero__headline hero-headline--${theme}`}>
+      <div className={`hero__headline hero__headline--${theme}`}>
         {headline || <h1>Welcome to our Surfcamp</h1>}
       </div>
       <button className={` btn btn--medium  btn--${theme}`}>
@@ -43,7 +43,7 @@ export default function HeroSection({
       </button>
 
       {/* Logo */}
-      <div className={`hero__logo hero-logo--${theme}`}>
+      <div className={`hero__logo hero__logo--${theme}`}>
         <Image src={logoSrc} alt="Logo" width={125} height={190} />
       </div>
     </section>

@@ -18,9 +18,12 @@
     }
   }
 
-  &__image,s
+  &__image,
   &__text {
     width: 48%;
+  }
+  &__content {
+    font-size: 2rem;
   }
 
   &__image {
