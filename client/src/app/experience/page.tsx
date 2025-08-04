@@ -1,11 +1,6 @@
 import HeroSection from '@/components/HeroSection';
 
-
-
-
 export default async function Home() {
-
-
   const heroHeadline = (
     <>
       <h1>barrel.</h1>
@@ -15,8 +10,7 @@ export default async function Home() {
   );
   return (
     <main>
-      <HeroSection imgSrc="/assets/hero-experience.png" headline={heroHeadline} theme="orange" />
-  
+      <HeroSection imageSrc="/assets/hero-experience.png" headline={heroHeadline} theme="orange" />
     </main>
   );
 }

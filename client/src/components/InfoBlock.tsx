@@ -35,7 +35,7 @@ export function InfoBlock({
         className="info__image"
       />
       <div className="info__text">
-        <h2 className={`info__headline info__headline--${theme}`}>{headline}</h2>
+        <h2 className="info__headline">{headline}</h2>
         <p className="info__content">{content}</p>
         {/* Call to Action Button */}
         {cta && (
