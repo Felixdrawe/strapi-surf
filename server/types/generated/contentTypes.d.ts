@@ -407,6 +407,70 @@ export interface ApiInfoBlockInfoBlock extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiInfoblocksExperienceInfoblocksExperience
+  extends Struct.SingleTypeSchema {
+  collectionName: 'infoblocks_experiences';
+  info: {
+    displayName: 'Infoblocks Experience';
+    pluralName: 'infoblocks-experiences';
+    singularName: 'infoblocks-experience';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    info_blocks: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::info-block.info-block'
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::infoblocks-experience.infoblocks-experience'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiInfoblocksLandingInfoblocksLanding
+  extends Struct.SingleTypeSchema {
+  collectionName: 'infoblocks_landings';
+  info: {
+    displayName: 'Infoblocks Landing';
+    pluralName: 'infoblocks-landings';
+    singularName: 'infoblocks-landing';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    info_blocks: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::info-block.info-block'
+    >;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::infoblocks-landing.infoblocks-landing'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -917,6 +981,8 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::info-block.info-block': ApiInfoBlockInfoBlock;
+      'api::infoblocks-experience.infoblocks-experience': ApiInfoblocksExperienceInfoblocksExperience;
+      'api::infoblocks-landing.infoblocks-landing': ApiInfoblocksLandingInfoblocksLanding;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
